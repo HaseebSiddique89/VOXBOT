@@ -3,6 +3,7 @@
 
 ## Flask Setup and Routes
 - The chatbot is built as a web application using the Flask framework.
+- •	The Flask application sets up routes to handle different user interactions.
 - Routes include:
     - Home page ("/"): Displays the landing page of the chatbot.
     - User signup ("/signup"): Handles user registration.
@@ -11,8 +12,15 @@
 
 ## User Signup and Login
 - The chatbot allows users to create accounts and log in.
-- The chatbot verifies the uniqueness of the email address using Neo4j.
-- Successful signup redirects users to the chat interface.
+- The user signup functionality enables users to register by providing a username, email, and password.
+- The chatbot verifies the uniqueness of the provided email address.
+- If the email is unique, a new user node is created in the Neo4j graph database, and the user is redirected to the chat interface.
+- If the email already exists, an error message is displayed.
+- The user login functionality validates the provided email and password against the database for authentication.
+
+![Signup Page](https://github.com/HaseebSiddique89/VOXBOT/blob/main/images/Picture1.jpg)
+
+![Login Page](https://github.com/HaseebSiddique89/VOXBOT/blob/main/images/Picture2.jpg)
 
 ## Chat Interface
 - Provides a user-friendly environment for interacting with the chatbot.
